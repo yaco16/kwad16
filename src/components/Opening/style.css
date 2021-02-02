@@ -22,7 +22,6 @@ body {
   animation: enter 3s;
   animation-delay: 3.5s;
   animation-fill-mode: forwards;
-
 }
 
 #opening__enter:hover {

@@ -1,0 +1,22 @@
+@use 'src/styles/vars' as v;
+
+.fourzerofour{
+  margin: 0 auto;
+
+  &__number{
+    font-size: 10em;
+    font-weight: bold;
+
+    & > span{
+        color: v.$color-primary;
+    }
+  }
+  &__text{
+    font-size: 7em;
+    font-weight: bold;
+  }
+}
+
+.fourzerofour__blank__div{
+    min-height: 10em;
+}
