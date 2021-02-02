@@ -3,7 +3,7 @@
 export const navSlide = () => {
   const nav = document.querySelector('.nav__links');
   const navLinks = document.querySelectorAll('.nav__links li');
-  const burger = document.querySelector('.burger');
+  const burger = document.querySelector('.nav__burger');
 
   nav.classList.toggle('nav-active');
 
