@@ -37,6 +37,7 @@ h1 {
   height: 3px;
   background-color: white;
   margin: 5px;
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width:768px) {
@@ -85,4 +86,16 @@ h1 {
     opacity: 1;
     transform: translate(0px);
   }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
