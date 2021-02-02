@@ -1,7 +1,11 @@
 import React from 'react';
 import './style.scss';
-import Template from 'src/components/Template';
+import Nav from 'src/components/partials/Nav';
 
-const Home = () => <Template />;
+const Home = () => (
+  <div>
+    <Nav />
+  </div>
+);
 
 export default Home;
