@@ -10,6 +10,35 @@ body {
   background-color: #4e7d9e;
 }
 
+#opening__enter {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-family: 'Overlock', sans-serif;
+  color: white;
+  opacity: 0.0;
+  animation: enter 3s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+
+}
+
+#opening__enter:hover {
+  text-decoration: underline solid white 2px;
+  cursor: pointer;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #logo {
   position: absolute;
   top: 50%;
