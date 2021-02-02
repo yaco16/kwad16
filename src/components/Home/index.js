@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
-import Nav from 'src/components/Nav';
+import Template from 'src/components/Template';
 
-const Home = () => <Nav />;
+const Home = () => <Template />;
 
 export default Home;
