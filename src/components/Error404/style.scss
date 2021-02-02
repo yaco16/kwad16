@@ -3,14 +3,11 @@
 .fourzerofour{
   margin: 0 auto;
   width: 80%;
+  color: white;
 
   &__number{
     font-size: 10em;
     font-weight: bold;
-
-    & > span{
-        color: v.$color-primary;
-    }
   }
   &__text{
     font-size: 7em;
