@@ -4,11 +4,10 @@ import './style.scss';
 
 const Error404 = () => (
   <main>
-    <div className="fourzerofour">
-      <div className="fourzerofour__blank__div" />
-      <h1 className="fourzerofour__number">404</h1>
-      <p className="fourzerofour__text">Not Found</p>
-      <div className="fourzerofour__blank__div" />
+    <div className="error404">
+      <div className="error404__blank__div" />
+      <h1 className="error404__text">404</h1>
+      <h1 className="error404__text">Not found</h1>
     </div>
   </main>
 );
