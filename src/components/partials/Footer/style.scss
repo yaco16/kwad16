@@ -1,0 +1,48 @@
+@use 'src/styles/vars' as v;
+
+.footer__container {
+  background-color: v.$color-nav_footer;
+  padding-bottom: 4rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // height: 10vh;
+  padding: 1rem;
+}
+
+.footer {
+  // width: 80%;
+  background-color: v.$color-nav_footer;
+  color: white;
+  font-family: Overlock, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.footer__header {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+}
+
+.footer__header h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.footer__header a {
+  margin-bottom: 0.5rem;
+}
+
+.footer__header a:hover {
+  text-decoration: underline;
+  transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 1150px) {
+  .footer {
+    height: 10vh;
+  }
+}
