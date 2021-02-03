@@ -1,5 +1,7 @@
+@use 'src/styles/vars' as v;
+
 nav {
-  background-color: #225a83;
+  background-color: v.$color-nav_footer;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -24,6 +26,11 @@ h1 {
 .nav__links .nav__link {
   font-weight: bold;
   letter-spacing: 0.1rem;
+}
+
+.nav__links .nav__link:hover {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .nav__burger {
