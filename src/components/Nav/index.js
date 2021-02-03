@@ -13,6 +13,11 @@ const Nav = () => (
     </div>
     <ul className="nav__links">
       <li className="nav__link">
+        <NavLink exact to="/Home">
+          Home
+        </NavLink>
+      </li>
+      <li className="nav__link">
         <NavLink exact to="/about">
           About me
         </NavLink>
