@@ -11,12 +11,14 @@ const Nav = () => (
         <h1>kwad16</h1>
       </NavLink>
     </div>
+
+    <div className="nav__burger" onClick={(event) => navSlide(event)}>
+      <div className="nav__burger__line1" />
+      <div className="nav__burger__line2" />
+      <div className="nav__burger__line3" />
+    </div>
+    
     <ul className="nav__links">
-      <li className="nav__link">
-        <NavLink exact to="/Home">
-          Home
-        </NavLink>
-      </li>
       <li className="nav__link">
         <NavLink exact to="/about">
           About me
@@ -33,11 +35,6 @@ const Nav = () => (
         </NavLink>
       </li>
     </ul>
-    <div className="nav__burger" onClick={(event) => navSlide(event)}>
-      <div className="nav__burger__line1" />
-      <div className="nav__burger__line2" />
-      <div className="nav__burger__line3" />
-    </div>
   </nav>
 );
 

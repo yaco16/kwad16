@@ -1,0 +1,21 @@
+.home__title,
+.home__subtitle {
+  font-family: Overlock, sans-serif;
+}
+
+.home__title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home__subtitle {
+  font-size: 2rem;
+}
+
+@media screen and (max-width:1024px) {
+  main {
+    float: left;
+
+  }
+}
