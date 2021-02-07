@@ -5,10 +5,10 @@ import './style.scss';
 import Nav from 'src/components/Nav';
 // import Footer from 'src/components/Footer';
 
-import Opening from 'src/components/Opening';
-import Error404 from 'src/components/Error404';
-import Home from 'src/components/Home';
-import About from 'src/components/About';
+import Opening from 'src/pages/Opening';
+import Error404 from 'src/pages/Error404';
+import Home from 'src/pages/Home';
+import About from 'src/pages/About';
 
 const App = () => (
   <div className="app__container">
