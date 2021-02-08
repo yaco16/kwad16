@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './form.scss';
+import './style.scss';
 import picture from 'src/assets/images/img-2.svg';
 import FormSignup from './form';
 import FormSuccess from './formSuccess';

@@ -1,5 +1,5 @@
 import React from 'react';
-import './form.scss';
+import './style.scss';
 import picture from 'src/assets/images/img-3.svg';
 
 const FormSuccess = () => (

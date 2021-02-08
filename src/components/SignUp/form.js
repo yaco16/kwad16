@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import validate from './validateValues';
 import useForm from './useForm';
-import './form.scss';
+import './style.scss';
 
 const FormSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
