@@ -9,7 +9,7 @@ import Opening from 'src/pages/Opening/opening';
 import Error404 from 'src/pages/Error404/error404';
 import Home from 'src/pages/Home/home';
 import About from 'src/pages/About/about';
-import SignUp from 'src/pages/SignUp/signUp';
+import SignUp from 'src/components/SignUp/signUp';
 
 const App = () => (
   <div className="app__container">
@@ -26,7 +26,7 @@ const App = () => (
         <Route exact path="/about">
           <About />
         </Route>
-        <Route exact path="/login">
+        <Route exact path="/signup">
           <SignUp />
         </Route>
         <Route>
