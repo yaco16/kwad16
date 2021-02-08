@@ -10,6 +10,7 @@ import Error404 from 'src/components/Error404/error404';
 import Home from 'src/components/Home/home';
 import About from 'src/components/About/about';
 import SignUp from 'src/components/SignUp/signUp';
+import Login from 'src/components/Login/login';
 
 const App = () => (
   <div className="app__container">
@@ -28,6 +29,9 @@ const App = () => (
         </Route>
         <Route exact path="/signup">
           <SignUp />
+        </Route>
+        <Route exact path="/login">
+          <Login />
         </Route>
         <Route>
           <Error404 />

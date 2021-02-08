@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './style.scss';
-import { navSlide } from './nav_app';
+import { navSlide } from './nav_logic';
 
 const Nav = () => (
   <nav>
@@ -34,7 +34,18 @@ const Nav = () => (
           Login
         </NavLink>
       </li>
+      <li className="nav__link">
+        <NavLink exact to="/signup">
+          Sign up
+        </NavLink>
+      </li>
+      <li className="nav__link">
+        <NavLink exact to="/contact">
+          Contact
+        </NavLink>
+      </li>
     </ul>
+    <div className="nav__lang">Eng/Fr</div>
   </nav>
 );
 

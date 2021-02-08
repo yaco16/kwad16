@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import validate from './validateValues';
 import useForm from './useForm';
@@ -14,7 +15,7 @@ const FormSignup = ({ submitForm }) => {
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form" noValidate>
         <h1>
-          Sign up.
+          Sign up
         </h1>
         <div className="form-inputs">
           <label className="form-label">Username</label>
@@ -68,7 +69,7 @@ const FormSignup = ({ submitForm }) => {
           Sign up
         </button>
         <span className="form-input-login">
-          Already have an account? Login <a href="#">here</a>
+          Already have an account? <Link to="/login" id="form__loginLink">Login</Link>
         </span>
       </form>
     </div>
