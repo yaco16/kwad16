@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './form.scss';
+import picture from 'src/assets/images/img-2.svg';
 import FormSignup from './form';
 import FormSuccess from './formSuccess';
-import picture from './img-2.svg';
 
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);

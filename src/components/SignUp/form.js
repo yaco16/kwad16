@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import validate from './validateValues';
 import useForm from './useForm';
 import './form.scss';
@@ -13,8 +14,7 @@ const FormSignup = ({ submitForm }) => {
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form" noValidate>
         <h1>
-          Get started with us today! Create your account by filling out the
-          information below.
+          Sign up.
         </h1>
         <div className="form-inputs">
           <label className="form-label">Username</label>
@@ -73,6 +73,10 @@ const FormSignup = ({ submitForm }) => {
       </form>
     </div>
   );
+};
+
+FormSignup.propTypes = {
+  submitForm: PropTypes.func.isRequired,
 };
 
 export default FormSignup;

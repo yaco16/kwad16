@@ -1,6 +1,6 @@
 import React from 'react';
 import './form.scss';
-import picture from '../../assets/images/img-3.svg';
+import picture from 'src/assets/images/img-3.svg';
 
 const FormSuccess = () => (
   <div className="form-content-right">
