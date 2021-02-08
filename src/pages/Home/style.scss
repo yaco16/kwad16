@@ -1,6 +1,6 @@
 .home__title,
 .home__subtitle {
-  font-family: Overlock, sans-serif;
+  font-family: 'Overlock', sans-serif;
 }
 
 .home__title {
@@ -11,7 +11,13 @@
 
 .home__subtitle {
   font-size: 2rem;
+  display: inline-block;
+  span {
+    display: inline-block;
+  }
+
 }
+
 
 @media screen and (max-width:1024px) {
   main {

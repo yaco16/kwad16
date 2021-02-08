@@ -1,21 +1,41 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable no-console */
-export const navSlide = () => {
-  const nav = document.querySelector('.nav__links');
-  const navLinks = document.querySelectorAll('.nav__links li');
-  const burger = document.querySelector('.nav__burger');
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-  nav.classList.toggle('nav-active');
+import './style.scss';
+import { navSlide } from './nav_app';
 
-  navLinks.forEach((link, index) => {
-    if (link.style.animation) {
-      link.style.animation = '';
-    } else {
-      link.style.animation = `navLinkFade 0.2s ease forwards ${
-        index / navLinks.length + 0.2
-      }s`;
-    }
-  });
+const Nav = () => (
+  <nav>
+    <div>
+      <NavLink exact to="/home">
+        <h1>kwad16</h1>
+      </NavLink>
+    </div>
 
-  burger.classList.toggle('toggle');
-};
+    <div className="nav__burger" onClick={(event) => navSlide(event)}>
+      <div className="nav__burger__line1" />
+      <div className="nav__burger__line2" />
+      <div className="nav__burger__line3" />
+    </div>
+
+    <ul className="nav__links">
+      <li className="nav__link">
+        <NavLink exact to="/about">
+          About me
+        </NavLink>
+      </li>
+      <li className="nav__link">
+        <NavLink exact to="/projects">
+          Projects
+        </NavLink>
+      </li>
+      <li className="nav__link">
+        <NavLink exact to="/login">
+          Login
+        </NavLink>
+      </li>
+    </ul>
+  </nav>
+);
+
+export default Nav;
