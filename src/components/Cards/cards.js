@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import Card from './card';
+import Card from './card2';
 import './style.scss';
 // import data from
 // import { log } from 'console';
