@@ -9,7 +9,7 @@ const Cards = () => {
   console.log('coucou');
   return (
     <main>
-      <h1 className="cards__title">Here is the list of projects I work on</h1>
+      <h1 className="page__title">Here is the list of projects I work on</h1>
       <div className="cards__container">
         <Card />
         <Card />
