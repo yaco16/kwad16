@@ -32,6 +32,7 @@ const Card = ({ project }) => {
           <p className="card__text">{description}</p>
         </figure>
         <figure className="card__back">
+        <h3 className="card__technos">Used technologies</h3>
           <ul>
             <li>tech1</li>
             <li>tech2</li>
