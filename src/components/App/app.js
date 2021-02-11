@@ -11,7 +11,7 @@ import Home from 'src/components/Home/home';
 import About from 'src/components/About/about';
 import SignUp from 'src/components/SignUp/signUp';
 import Login from 'src/components/Login/login';
-import Cards from 'src/components/Cards/cards';
+import Cards from '../../Pages/projects';
 
 const App = () => (
   <div className="app__container">

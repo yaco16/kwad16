@@ -1,22 +1,13 @@
 /* eslint-disable no-console */
 import React from 'react';
+import projects from '../../../public/data/projects';
 import Card from './card';
+
 import './style.scss';
-// import data from
-// import { log } from 'console';
 
 const Cards = () => {
-  // console.log('coucou');
-  return (
-    <main>
-      <h1 className="page__title">Here is the list of projects I work on</h1>
-      <div className="cards__container">
-        <Card />
-        <Card />
-        <Card />
-      </div>
-    </main>
-  );
+  const cardsList = projects.map((project) => <Card key={project.id} project={project} />);
+  return <div className="cards__container">{cardsList}</div>;
 };
 
 export default Cards;

@@ -1,19 +1,17 @@
+/* eslint-disable no-console */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.scss';
 import chat from '../../../public/img/chat.jpg';
-import handleClic from './card_logic';
+// import handleClic from './card_logic';
 
-const Card = () => (
-  <div className="card__container" >
+const Card = ({project}) => (
+  <div className="card__container">
     <img className="card__image" src={chat} alt="cat" />
     <div className="card">
       <figure className="card__front">
-        <h2 className="card__title">Title</h2>
-        <p className="card__text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa ut
-          minus atque eaque, placeat delectus? Sequi sit sed vitae beatae quia
-          cupiditate suscipit
-        </p>
+        <h2 className="card__title">{project.title}</h2>
+        <p className="card__text">{project.description}</p>
       </figure>
       <figure className="card__back">
         <ul>
@@ -25,7 +23,9 @@ const Card = () => (
       </figure>
     </div>
     <div className="card__footer" type="button">
-      <span>Click to flip</span>
+      <span>
+        <Link to="#"> Click here to see</Link>
+      </span>
     </div>
   </div>
 );
