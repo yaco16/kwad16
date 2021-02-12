@@ -1,0 +1,148 @@
+body {
+  font-family: 'Overlock', sans-serif;
+}
+.page__title {
+  color: white;
+  letter-spacing: 0;
+}
+
+// .cards__container {
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.cards__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+// .cards__container:hover .card__container {
+//   transform: rotateY(180deg);
+// }
+
+.card__container {
+  background-color: white;
+  width: 250px;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  transition: 1s;
+  margin: 1.4rem;
+    &:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transition: 1s ease-in-out;
+  // transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card__container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card__image {
+  display: block;
+  margin: 0.5rem auto;
+  width: 90%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.card__title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.card__text {
+  letter-spacing: 0.1rem;
+  line-height: 1.1;
+  color: #3d3d3d;
+  margin: 0 0.8rem;
+}
+
+.card__footer {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  color: #3363ff;
+  background-color: #d8e0fd;
+  border: none;
+  border-radius: 0;
+  // transition: 0.2s;
+  letter-spacing: 0.1rem;
+
+  span {
+    margin-left: 1rem;
+    // transition: 0.2s;
+  }
+
+//   &:hover,
+//   &:active {
+// background-color: #c2cffc;
+//   }
+
+//   &:hover span,
+//   &:active span {
+//     margin-left: 1.5rem;
+//   }
+}
+
+
+// .card__container:hover .card {
+//   transform: rotateY(180deg);
+// }
+
+.card figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  backface-visibility: hidden;
+}
+
+.card__front {
+  background-color: white;
+}
+
+.card__back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.card__technos {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+li {
+  letter-spacing: 0.1rem;
+  line-height: 1.1;
+  color: #3d3d3d;
+  margin: 0 2rem;
+  margin-bottom: 0.2rem;
+}
+
+@media only screen and (max-width:1024px) {
+  body {
+    width: 100%;
+  }
+}
