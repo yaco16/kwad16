@@ -23,6 +23,15 @@ body {
   margin: 1.4rem;
 }
 
+.cards__container:hover > div {
+  opacity: 0.5;
+}
+
+.cards__container:hover > *:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
 .card {
   position: relative;
   width: 100%;
