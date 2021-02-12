@@ -23,7 +23,7 @@ client.query('SELECT NOW()', (err, res) => {
   } else {
     console.log('Connected to database successfully');
   }
-  client.end();
+  // client.end();
 });
 
 module.exports = client;
