@@ -12,7 +12,6 @@ import pimz from 'src/components/Cards/img/pimz.png';
 
 const Card = ({ project }) => {
   const { image, title, description } = project;
-  console.log('image:', image);
   let photo;
   if (image === 'pimz') {
     photo = pimz;
