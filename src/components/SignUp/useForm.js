@@ -1,4 +1,6 @@
+/* eslint-disable no-console */
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const useForm = (callback, validate) => {
   const [values, setValues] = useState({
@@ -23,6 +25,16 @@ const useForm = (callback, validate) => {
 
     setErrors(validate(values));
     setIsSubmitting(true);
+    console.log(values);
+
+    const { username, email, password } = values;
+    axios.post('http://localhost:1234/signup', {
+      username,
+      email,
+      password,
+    }).then((res) => {
+      console.log(res);
+    });
   };
 
   useEffect(() => {
