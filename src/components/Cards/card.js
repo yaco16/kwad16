@@ -4,9 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './style.scss';
-import pimz from 'src/../public/img/pimz.png';
-import kwad16 from 'src/../public/img/kwad16.png';
-import todo from 'src/../public/img/todo.png';
+import pimz from 'src/components/Cards/img/pimz.png';
+import kwad16 from 'src/components/Cards/img/kwad16.png';
+import todo from 'src/components/Cards/img/todo.png';
 
 // import handleClic from './card_logic';
 
