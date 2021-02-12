@@ -2,3 +2,5 @@ node_js:
   - "10.19.0"
 script:
   - git pull
+  - yarn
+  - yarn build
