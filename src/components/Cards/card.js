@@ -11,7 +11,7 @@ import pimz from 'src/components/Cards/img/pimz.png';
 // import handleClic from './card_logic';
 
 const Card = ({ project }) => {
-  const { image, title, description } = project;
+  const { image, title, description, footerText, url } = project;
   let photo;
   if (image === 'pimz') {
     photo = pimz;
@@ -41,9 +41,9 @@ const Card = ({ project }) => {
           </ul>
         </figure>
       </div>
-      <div className="card__footer" type="button">
+      <div className="card__footer">
         <span>
-          <Link to="#"> Click here to see</Link>
+          <a href={url} target="_blank" rel="noreferrer">{footerText}</a>
         </span>
       </div>
     </div>
