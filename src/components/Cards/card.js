@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -10,7 +11,7 @@ import todo from '../../../public/img/todo.png';
 // import handleClic from './card_logic';
 
 const Card = ({ project }) => {
-  const { image, title, description, url, technos } = project;
+  const { image, title, description } = project;
   console.log('image:', image);
   let photo;
   if (image === 'pimz') {
