@@ -2,13 +2,15 @@
 const { Pool } = require('pg');
 require('dotenv').config();
 
-const client = new Pool({
+const dbParams = {
   host: process.env.PG_HOST,
   port: process.env.PG_PORT,
   database: process.env.PG_DATABASE,
   user: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
-});
+};
+
+const client = new Pool(dbParams);
 
 (async () => {
   await client.connect();
