@@ -87,8 +87,14 @@
 
 .inputBox {
   position: relative;
-  width: 100%;
+  left: -50px;
+  top: -15px;
+  // margin: 0;
+  width: 150%;
   font-weight: 500;
+}
+textarea {
+  height: 5rem;
 }
 
 input, textarea {
@@ -107,7 +113,7 @@ input, textarea {
 
 .inputBox span {
   position: absolute;
-  left: 0;
+  left: 4px;
   padding: 5px 0;
   font-size: 0.9em;
   margin: 10px 0;
