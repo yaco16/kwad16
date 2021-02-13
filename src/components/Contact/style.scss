@@ -18,7 +18,7 @@
   border-radius: 10px;
 }
 
-.title {
+.contact__title {
   font-size: 2em;
   font-weight: 500;
   color:white;
@@ -35,7 +35,7 @@
   padding: 0.7rem;
 }
 
-.content p {
+.content .contact__category__text {
   font-weight: 300;
   color: white;
   text-align: center;
@@ -72,7 +72,7 @@
   flex-direction: column;
 }
 
-.text h3 {
+.text .contact__category {
   font-weight: 500;
   color: #00bcd4;
 }
@@ -85,7 +85,7 @@
   // padding: 40px;
 }
 
-.inputBox {
+.contact__form__inputBox {
   position: relative;
   left: -50px;
   top: -15px;
@@ -93,11 +93,12 @@
   width: 150%;
   font-weight: 500;
 }
-textarea {
+
+.contact__form__textarea{
   height: 5rem;
 }
 
-input, textarea {
+.contact__form__input, .contact__form__textarea {
   // position: relative;
   width: 100%;
   padding: 5px 0;
@@ -111,7 +112,7 @@ input, textarea {
   // box-shadow: none;
 }
 
-.inputBox span {
+.contact__form__inputBox .contact__form__input__text {
   position: absolute;
   left: 4px;
   padding: 5px 0;
@@ -122,17 +123,17 @@ input, textarea {
   color: #666;
 }
 
-input:focus ~ span,
-input:valid ~ span,
-textarea:focus ~ span,
-textarea:valid ~ span {
+.contact__form__input:focus ~ .contact__form__input__text,
+.contact__form__input:valid ~ .contact__form__input__text,
+.contact__form__textarea:focus ~ .contact__form__input__text,
+.contact__form__textarea:valid ~ .contact__form__input__text {
   color: #00bcd4;
   font-size: 0.8em;
   left: 0;
   transform: translateY(-20px);
 }
 
-input[type="submit"] {
+.contact__form__submit {
   width: 100%;
   background-color: #00bcd4;
   color: white;
