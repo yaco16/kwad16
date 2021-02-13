@@ -11,7 +11,8 @@ import Home from 'src/components/Home/home';
 import About from 'src/components/About/about';
 import SignUp from 'src/components/SignUp/signUp';
 import Login from 'src/components/Login/login';
-import Cards from '../../Pages/projects';
+import Contact from 'src/components/Contact/contact';
+import Cards from 'src/Pages/projects';
 
 const App = () => (
   <div className="app__container">
@@ -36,6 +37,9 @@ const App = () => (
         </Route>
         <Route exact path="/projects">
           <Cards />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
         <Route>
           <Error404 />
