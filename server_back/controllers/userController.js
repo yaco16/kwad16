@@ -51,11 +51,6 @@ const userController = {
       console.log(error);
     }
   },
-
-  submitMail: (req, res) => {
-    console.log(req.body);
-    // res.json()
-  },
 };
 
 module.exports = userController;
