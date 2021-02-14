@@ -5,6 +5,7 @@ const db = require('../database');
 
 const userController = {
   createUser: async (req, res) => {
+    console.log(req.body);
     try {
       const emailSearched = await db.query(
         'SELECT * FROM "user" WHERE email=$1;',
@@ -17,7 +18,7 @@ const userController = {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         await db.query(
           'INSERT INTO "user" (username, email, password) VALUES ($1, $2, $3);',
-          [req.body.username, req.body.email, hashedPassword],
+          [req.body.username, req.body.email, hashedPassword]
         );
         res.status(200).json('New user created');
       }
@@ -30,14 +31,17 @@ const userController = {
     try {
       const emailSearched = await db.query(
         'SELECT * FROM "user" WHERE email=$1;',
-        [req.body.email],
+        [req.body.email]
       );
       if (emailSearched.rows[0] === undefined) {
         res.status(200).json('Email unknown');
         return;
       }
 
-      const checkPassword = await bcrypt.compare(req.body.password, emailSearched.rows[0].password);
+      const checkPassword = await bcrypt.compare(
+        req.body.password,
+        emailSearched.rows[0].password
+      );
       if (!checkPassword) {
         res.status(200).json('Wrong password');
       } else {
@@ -46,6 +50,11 @@ const userController = {
     } catch (error) {
       console.log(error);
     }
+  },
+
+  submitMail: (req, res) => {
+    console.log(req.body);
+    // res.json()
   },
 };
 
