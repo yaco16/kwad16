@@ -13,6 +13,7 @@ const useForm = () => {
 
   const handleChange = (event) => {
     event.preventDefault();
+    console.log('je suis dans handleChange');
     const [name, value] = event.target;
     setValues({
       ...values,
@@ -21,12 +22,10 @@ const useForm = () => {
   };
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
     console.log('je suis dans submit');
 
-    event.preventDefault();
-
     const { name, mail, message } = values;
-    console.log('values:', values);
 
     axios
       .post('/submitMail', {
@@ -36,7 +35,7 @@ const useForm = () => {
       })
       .then((res) => console.log(res));
   };
-  return { handleChange, handleSubmit };
+  return { handleChange, handleSubmit, values };
 };
 
 export default useForm;

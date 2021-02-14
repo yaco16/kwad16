@@ -1,12 +1,43 @@
-import React from 'react';
-import useForm from './useForm';
+/* eslint-disable no-console */
+import React, { useState } from 'react';
+import axios from 'axios';
 import './style.scss';
 import pin from './img/pin.svg';
 import call from './img/call.svg';
-import mail from './img/mail.svg';
+import enveloppe from './img/enveloppe.svg';
 
 const Contact = () => {
-  const { handleSubmit, handleChange, values } = useForm;
+  const [values, setValues] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (event) => {
+    event.preventDefault();
+
+    const { name, value } = event.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+    return values;
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('je suis dans submit');
+
+    const { name, email, message } = values;
+
+    axios
+      .post('http://localhost:1234/submitMail', {
+        name,
+        email,
+        message,
+      })
+      .then((res) => console.log(res));
+  };
   return (
     <div>
       <section className="contact">
@@ -33,7 +64,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="box">
-              <img className="icon" src={mail} alt="mail" />
+              <img className="icon" src={enveloppe} alt="mail" />
               <div className="text">
                 <h3 className="contact__category">Email</h3>
                 <p className="contact__category__text">kwad16@gmail.com</p>
@@ -41,14 +72,14 @@ const Contact = () => {
             </div>
           </div>
           <div className="container__right">
-            <form onClick={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="contact__form__inputBox">
                 <input
                   className="contact__form__input"
                   type="text"
-                  name=""
+                  name="name"
                   required="required"
-                  value={values}
+                  value={values.name}
                   onChange={handleChange}
                 />
                 <span className="contact__form__input__text">Full name</span>
@@ -56,10 +87,10 @@ const Contact = () => {
               <div className="contact__form__inputBox">
                 <input
                   className="contact__form__input"
-                  type="text"
-                  name=""
+                  type="email"
+                  name="email"
                   required="required"
-                  value={values}
+                  value={values.email}
                   onChange={handleChange}
                 />
                 <span className="contact__form__input__text">Email</span>
@@ -67,8 +98,10 @@ const Contact = () => {
               <div className="contact__form__inputBox">
                 <textarea
                   className="contact__form__textarea"
+                  type="text"
                   required="required"
-                  value={values}
+                  name="message"
+                  value={values.message}
                   onChange={handleChange}
                 />
                 <span className="contact__form__input__text">
@@ -76,7 +109,7 @@ const Contact = () => {
                 </span>
               </div>
               <div className="contact__form__inputBox">
-                <input className="contact__form__submit" type="submit" />
+                <input className="contact__form__submit" type="submit" value="Send" />
               </div>
             </form>
           </div>
