@@ -1,12 +1,12 @@
 import React from 'react';
-import './style.scss';
 import useForm from './useForm';
+import './style.scss';
 import pin from './img/pin.svg';
 import call from './img/call.svg';
 import mail from './img/mail.svg';
 
 const Contact = () => {
-  const {handleSubmit, handleChange, values} = useForm;
+  const { handleSubmit, handleChange, values } = useForm;
   return (
     <div>
       <section className="contact">
@@ -22,7 +22,7 @@ const Contact = () => {
               <img className="icon" src={pin} alt="pin" />
               <div className="text">
                 <h3 className="contact__category">Adress</h3>
-                <p className="contact__category__text">Nice</p>
+                <p className="contact__category__text">Nice, France</p>
               </div>
             </div>
             <div className="box">

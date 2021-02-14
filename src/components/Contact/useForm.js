@@ -36,6 +36,7 @@ const useForm = () => {
       })
       .then((res) => console.log(res));
   };
+  return { handleChange, handleSubmit };
 };
 
 export default useForm;
