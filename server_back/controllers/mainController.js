@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
+const sendMail = require('../services/nodemailer');
+
 const mainController = {
-  submitMail: (req, res) => {
-    res.status(200).json(req.body);
+  submitMail: (req) => {
+    sendMail(req.body);
   },
 };
 

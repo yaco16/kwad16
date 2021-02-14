@@ -5,6 +5,6 @@ const mainController = require('./controllers/mainController');
 
 router.post('/signUp', userController.createUser);
 router.post('/login', userController.login);
-// router.post('/submitMail', mainController.submitMail);
+router.post('/submitMail', mainController.submitMail);
 
 module.exports = router;
